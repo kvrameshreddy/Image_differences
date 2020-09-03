@@ -103,7 +103,7 @@ def upload_file():
 
 if __name__ == "__main__":
     # Only for debugging while developing
-    app.run(port=5000)
+    app.run()
     
 
 
