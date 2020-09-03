@@ -1,5 +1,5 @@
 numpy
 flask
 opencv-python
-base64
+pybase64
 skimage
