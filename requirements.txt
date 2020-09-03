@@ -2,4 +2,4 @@ numpy
 flask
 opencv-python
 pybase64
-skimage
+scikit-image
