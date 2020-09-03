@@ -4,3 +4,4 @@ opencv-python
 pybase64
 scikit-image
 gunicorn
+opencv-contrib-python
