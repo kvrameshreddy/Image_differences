@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Differences Demo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class = "container">
+    <div class = "starter-template">
+        <h1>Image Differences Demo</h1>
+        <p class = "lead"> Upload images </p>
+    </div>
+</div>
+
+<header class="navbar">
+    <form action="/upload" method="post" enctype="multipart/form-data" >
+        <div align="center">
+            <label class="btn btn-default btn-file">
+                <!--Browse First Image <input type="file" name="image1" multiple onchange="showname()" style="display: none;">-->
+                <input type="file" name="image1" id="img1" onchange="document.getElementById('file_name').value = this.value.split('\\').pop().split('/').pop()">
+                <!--<input type="text" name="file_name" id="file_name">-->
+            </label>
+        </div>
+        <div>
+            <label>
+            
+            </label>
+        
+        </div>
+        <div align="center">
+            <label class="btn btn-default btn-file">
+                <!--Browse Second Image<input type="file" name="image2" style="display: none;"> -->
+                <input type="file" name="image2" id="img2" onchange="document.getElementById('file_name2').value = this.value.split('\\').pop().split('/').pop()">
+                <!--<input type="text" name="file_name2" id="file_name2">-->
+            </label>
+            <input type="submit" value="Upload" class="btn btn-primary">
+        </div>
+    </form>
+</header>
+
+
+<div class="text-center">
+    
+            <div class="alert alert-success" style="margin-top:18px;">
+                
+            </div>
+            {% if image_to_show %}
+            {% if image_to_show1 %}
+                <div>
+                    <img src="{{ image_to_show1 }}" width="20%">
+                    <img src="{{ image_to_show }}" width="20%">
+                </div>
+            {% endif %}
+            {% endif %}
+            
+</div>
+
+</body>
+</html>
+
+
